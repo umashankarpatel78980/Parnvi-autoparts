@@ -1,0 +1,777 @@
+/* ========================================
+   SCOPED CSS FOR CUSTOMER SERVICE DASHBOARD
+   All styles are scoped to .customerServiceDashboard
+   ======================================== */
+
+/* Local Variables - Scoped to Dashboard */
+.customerServiceDashboard {
+    --dash-primary: #f59e0b;
+    --dash-primary-hover: #d97706;
+    --dash-danger: #ef4444;
+    --dash-success: #10b981;
+    --dash-text-main: #f5f5f4;
+    --dash-text-muted: #a8a29e;
+    --dash-border: #44403c;
+    --dash-bg-main: #1c1917;
+    --dash-bg-card: #1c1917;
+    
+    min-height: 100vh;
+    background: #0c0a09;
+   
+}
+
+/* ========================================
+   ERROR CONTAINER
+   ======================================== */
+.errorContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: #0c0a09;
+}
+
+.errorContainer .erroricon {
+    color: #ef4444;
+}
+
+.errorContainer h2 {
+    color: #f5f5f4;
+    font-size: 1.5rem;
+}
+
+/* ========================================
+   DASHBOARD HEADER
+   ======================================== */
+.customerServiceDashboard .dashboardHeader {
+    background: var(--dash-bg-card);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+.customerServiceDashboard .backBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    background: transparent;
+    border: 1px solid var(--dash-border);
+    border-radius: 8px;
+    color: var(--dash-text-main);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.25rem;
+}
+
+.customerServiceDashboard .backBtn:hover {
+    background: var(--dash-bg-main);
+    border-color: var(--dash-primary);
+}
+
+.customerServiceDashboard .headercontent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.customerServiceDashboard .headertop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.customerServiceDashboard .headertop h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dash-text-main);
+    margin: 0;
+}
+
+.customerServiceDashboard .statusbadge {
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.customerServiceDashboard .statusbadge.pending {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+}
+
+.customerServiceDashboard .statusbadge.in-progress {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+}
+
+.customerServiceDashboard .statusbadge.completed {
+    background: rgba(16, 185, 129, 0.15);
+    color: #6ee7b7;
+}
+
+.customerServiceDashboard .serviceinfogrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.customerServiceDashboard .infocard {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #292524;
+    border-radius: 12px;
+    border: 1px solid #44403c;
+}
+
+.customerServiceDashboard .infoicon {
+    color: var(--dash-primary);
+    flex-shrink: 0;
+}
+
+.customerServiceDashboard .infolabel {
+    font-size: 0.75rem;
+    color: var(--dash-text-muted);
+    margin: 0 0 0.25rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.customerServiceDashboard .infovalue {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dash-text-main);
+    margin: 0;
+}
+
+/* ========================================
+   SELECTION SECTION
+   ======================================== */
+.customerServiceDashboard .selectionsection {
+    margin-bottom: 1.5rem;
+}
+
+.customerServiceDashboard .selectioncard {
+    background: var(--dash-bg-card);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.customerServiceDashboard .selectiontitle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dash-text-main);
+    margin: 0 0 1.25rem 0;
+}
+
+.customerServiceDashboard .selectiontitle svg {
+    color: var(--dash-primary);
+}
+
+.customerServiceDashboard .selectiongrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.customerServiceDashboard .selectiongroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.customerServiceDashboard .selectiongroup label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--dash-text-main);
+}
+
+.customerServiceDashboard .selectinput {
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--dash-border);
+    border-radius: 8px;
+    background: var(--dash-bg-card);
+    color: var(--dash-text-main);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.customerServiceDashboard .selectinput:hover:not(:disabled) {
+    border-color: var(--dash-primary);
+}
+
+.customerServiceDashboard .selectinput:focus {
+    outline: none;
+    border-color: var(--dash-primary);
+    box-shadow: 0 0 0 3px rgba(252, 181, 59, 0.1);
+}
+
+.customerServiceDashboard .selectinput:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #f1f5f9;
+}
+
+.customerServiceDashboard .detectionbadge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(16, 185, 129, 0.15);
+    border-radius: 10px;
+    border: 2px solid #10b981;
+    margin-top: 1rem;
+}
+
+.customerServiceDashboard .detectionbadge svg {
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+.customerServiceDashboard .detectionbadge span {
+    font-size: 0.95rem;
+    color: #6ee7b7;
+}
+
+.customerServiceDashboard .detectionbadge strong {
+    font-weight: 700;
+    color: #10b981;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+.customerServiceDashboard .maincontent {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 1.5rem;
+}
+
+/* ========================================
+   PARTS SECTION
+   ======================================== */
+.customerServiceDashboard .partssection {
+    background: var(--dash-bg-card);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.customerServiceDashboard .partsheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.customerServiceDashboard .partsheader h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dash-text-main);
+    margin: 0;
+}
+
+.customerServiceDashboard .partsheader h2 svg {
+    color: var(--dash-primary);
+}
+
+.customerServiceDashboard .searchbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    background: var(--dash-bg-card);
+    border: 2px solid var(--dash-border);
+    border-radius: 8px;
+    min-width: 250px;
+    transition: all 0.3s ease;
+}
+
+.customerServiceDashboard .searchbox:focus-within {
+    border-color: var(--dash-primary);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.customerServiceDashboard .searchbox svg {
+    color: var(--dash-text-muted);
+}
+
+.customerServiceDashboard .searchbox input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    color: var(--dash-text-main);
+    font-size: 0.9rem;
+}
+
+.customerServiceDashboard .emptystate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    gap: 1rem;
+    color: var(--dash-text-muted);
+    text-align: center;
+}
+
+.customerServiceDashboard .emptystate svg {
+    color: var(--dash-border);
+}
+
+.customerServiceDashboard .emptystate p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.customerServiceDashboard .partsgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+/* Custom scrollbar */
+.customerServiceDashboard .partsgrid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.customerServiceDashboard .partsgrid::-webkit-scrollbar-track {
+    background: #292524;
+    border-radius: 4px;
+}
+
+.customerServiceDashboard .partsgrid::-webkit-scrollbar-thumb {
+    background: var(--dash-primary);
+    border-radius: 4px;
+}
+
+.customerServiceDashboard .partsgrid::-webkit-scrollbar-thumb:hover {
+    background: var(--dash-primary-hover);
+}
+
+.customerServiceDashboard .partcard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #292524;
+    border: 2px solid #44403c;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.customerServiceDashboard .partcard:hover {
+    border-color: var(--dash-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.1);
+}
+
+.customerServiceDashboard .partinfo {
+    flex: 1;
+}
+
+.customerServiceDashboard .partinfo h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dash-text-main);
+    margin: 0 0 0.25rem 0;
+}
+
+.customerServiceDashboard .partcategory {
+    font-size: 0.75rem;
+    color: var(--dash-text-muted);
+    margin: 0 0 0.5rem 0;
+}
+
+.customerServiceDashboard .partdetails {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.customerServiceDashboard .partprice {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--dash-primary);
+}
+
+.customerServiceDashboard .partstock {
+    font-size: 0.75rem;
+    color: var(--dash-text-muted);
+}
+
+.customerServiceDashboard .partstock.outofstock {
+    color: var(--dash-danger);
+    font-weight: 600;
+}
+
+.customerServiceDashboard .addbtn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dash-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.customerServiceDashboard .addbtn:hover:not(:disabled) {
+    background: var(--dash-primary-hover);
+    transform: scale(1.1);
+}
+
+.customerServiceDashboard .addbtn:disabled {
+    background: var(--dash-text-muted);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.customerServiceDashboard .addbtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   CART SECTION
+   ======================================== */
+.customerServiceDashboard .cartsection {
+    background: var(--dash-bg-card);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    max-height: 700px;
+    position: sticky;
+    top: 1.5rem;
+}
+
+.customerServiceDashboard .cartheader {
+    margin-bottom: 1rem;
+}
+
+.customerServiceDashboard .cartheader h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dash-text-main);
+    margin: 0;
+}
+
+.customerServiceDashboard .cartheader h2 svg {
+    color: var(--dash-primary);
+}
+
+.customerServiceDashboard .emptycart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    gap: 0.75rem;
+    color: var(--dash-text-muted);
+    text-align: center;
+}
+
+.customerServiceDashboard .emptycart svg {
+    color: var(--dash-border);
+}
+
+.customerServiceDashboard .emptycart p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.customerServiceDashboard .emptycart span {
+    font-size: 0.875rem;
+}
+
+.customerServiceDashboard .cartitems {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    padding-right: 0.5rem;
+}
+
+.customerServiceDashboard .cartitems::-webkit-scrollbar {
+    width: 6px;
+}
+
+.customerServiceDashboard .cartitems::-webkit-scrollbar-track {
+    background: #292524;
+    border-radius: 3px;
+}
+
+.customerServiceDashboard .cartitems::-webkit-scrollbar-thumb {
+    background: var(--dash-primary);
+    border-radius: 3px;
+}
+
+.customerServiceDashboard .cartitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem;
+    background: #292524;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    border: 1px solid #44403c;
+}
+
+.customerServiceDashboard .cartiteminfo {
+    flex: 1;
+}
+
+.customerServiceDashboard .cartiteminfo h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dash-text-main);
+    margin: 0 0 0.25rem 0;
+}
+
+.customerServiceDashboard .cartitemprice {
+    font-size: 0.8rem;
+    color: var(--dash-text-muted);
+    margin: 0;
+}
+
+.customerServiceDashboard .cartitemactions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.customerServiceDashboard .qtybtn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dash-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.customerServiceDashboard .qtybtn:hover {
+    background: var(--dash-primary-hover);
+}
+
+.customerServiceDashboard .qtydisplay {
+    min-width: 24px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.customerServiceDashboard .removebtn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: var(--dash-danger);
+    border: 1px solid var(--dash-danger);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.customerServiceDashboard .removebtn:hover {
+    background: var(--dash-danger);
+    color: white;
+}
+
+.customerServiceDashboard .cartsummary {
+    padding: 1rem 0;
+    border-top: 2px solid var(--dash-border);
+    border-bottom: 2px solid var(--dash-border);
+    margin-bottom: 1rem;
+}
+
+.customerServiceDashboard .summaryrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--dash-text-muted);
+}
+
+.customerServiceDashboard .summaryrow.total {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--dash-text-main);
+    padding-top: 0.75rem;
+}
+
+.customerServiceDashboard .savebtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.customerServiceDashboard .savebtn:hover {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+}
+
+.errorContainer .btn.primary {
+    padding: 0.75rem 1.5rem;
+    background: #f59e0b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.errorContainer .btn.primary:hover {
+    background: #d97706;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 1200px) {
+    .customerServiceDashboard .maincontent {
+        grid-template-columns: 1fr 320px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .customerServiceDashboard .maincontent {
+        grid-template-columns: 1fr;
+    }
+
+    .customerServiceDashboard .cartsection {
+        position: static;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .customerServiceDashboard {
+        padding: 1rem;
+    }
+
+    .customerServiceDashboard .dashboardHeader {
+        padding: 1.25rem;
+    }
+
+    .customerServiceDashboard .headertop h1 {
+        font-size: 1.5rem;
+    }
+
+    .customerServiceDashboard .serviceinfogrid {
+        grid-template-columns: 1fr;
+    }
+
+    .customerServiceDashboard .selectiongrid {
+        grid-template-columns: 1fr;
+    }
+
+    .customerServiceDashboard .partsheader {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .customerServiceDashboard .searchbox {
+        min-width: 100%;
+    }
+
+    .customerServiceDashboard .partsgrid {
+        grid-template-columns: 1fr;
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .customerServiceDashboard {
+        padding: 0.75rem;
+    }
+
+    .customerServiceDashboard .dashboardHeader,
+    .customerServiceDashboard .selectioncard,
+    .customerServiceDashboard .partssection,
+    .customerServiceDashboard .cartsection {
+        padding: 1rem;
+    }
+
+    .customerServiceDashboard .headertop h1 {
+        font-size: 1.25rem;
+    }
+
+    .customerServiceDashboard .infocard {
+        padding: 0.75rem;
+    }
+
+    .customerServiceDashboard .selectiontitle,
+    .customerServiceDashboard .partsheader h2,
+    .customerServiceDashboard .cartheader h2 {
+        font-size: 1.1rem;
+    }
+
+    .customerServiceDashboard .partcard {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .customerServiceDashboard .addbtn {
+        width: 100%;
+    }
+}
